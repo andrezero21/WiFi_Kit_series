@@ -87,7 +87,7 @@ void setup() {
   SPI.begin(SCK,MISO,MOSI,SS);
   LoRa.setPins(SS,RST,DI00);
   
-  if (!LoRa.begin(BAND,PABOOST)) {
+  if (!LoRa.begin(BAND)) {
     display.drawString(0, 0, "Starting LoRa failed!");
     display.display();
     while (1);
